@@ -8,13 +8,9 @@
 
 // Then add additional custom code here
 
-body {
-    padding: 50px;
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
 a {
     color: #00B7FF;
+    text-decoration: none;
 }
 
 
@@ -54,4 +50,377 @@ img {
 .main-form-login {
     max-width: 100%;
     width: 500px;
+}
+
+// Header
+
+.navbar-main {
+    padding: 2rem 0;
+    background-color: #092327;
+
+    .logo-header {
+        max-width: 180px;
+        width: 100%;
+        height: auto;
+    }
+
+    .list-sociais-header {
+        display: flex;
+        align-items: center;
+        column-gap: 25px;
+
+        a i {
+            transition: all .5s;
+            font-size: 20px;
+            color: #f2f5f7ed;
+            display: inline-flex;
+            align-items: center;
+            line-height: 1;
+            column-gap: 5px
+        }
+        a:hover i {
+            color: #fff
+        }
+
+    }
+    .btn-header {
+        color: #000;
+        font-size: 14px;
+        display: inline-flex;
+        align-items: center;
+        padding: 10px 20px;
+        border-radius: 8px;
+        width: max-content;
+        max-width: 100%;
+        transition: all .3s;
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, .1);
+        background-color: #f2f5f7ed;
+        font-weight: 500;
+        gap: 10px;
+        text-transform: uppercase;
+        letter-spacing: 2px
+
+        &hover {
+            background-color: #3eb49a;
+            color: #fff;
+            transform: scale(.9)
+        }
+    }
+
+    .btn-close {
+        box-sizing: content-box;
+        width: 2em;
+        height: 2em;
+        padding: .25em .25em;
+        color: #000;
+        background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;
+        border: 0;
+        border-radius: 5px;
+        opacity: 1;
+        background-size: 10px;
+
+        &focus, &hover {
+            outline: 0;
+            box-shadow: 0 0 0;
+            background: #0b5351 url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%233eb49a'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;
+            opacity: 1;
+            background-size: 10px
+        }
+    }
+
+
+}
+
+.navbar-main .navbar-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23f2f5f7ed' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.5' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    background-size: auto
+}
+
+.navbar-main .navbar-toggler,
+.navbar-main .navbar-toggler:focus {
+    border-width: 0;
+    box-shadow: 0 0
+}
+
+.dropdown-submenu {
+    position: relative
+}
+
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+    margin-left: -1px;
+    -webkit-border-radius: 0 6px 6px 6px;
+    -moz-border-radius: 0 6px 6px;
+    border-radius: 0 6px 6px 6px
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+    display: block
+}
+
+.dropdown-submenu>a:after {
+    display: inline-flex;
+    float: right;
+    content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23000000' viewBox='0 0 16 16'%3e%3cpath stroke-linecap='round' stroke-miterlimit='10' stroke-width='.5' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z' stroke='rgba%280,0,0,1.0%29'/%3e%3c/svg%3e");
+    padding-left: 2rem;
+    background-color: transparent;
+    border-color: transparent;
+    transform: scale(.5);
+    border-width: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center
+}
+
+.dropdown-submenu:hover>a:after {
+    content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23f2f5f7ed' viewBox='0 0 16 16'%3e%3cpath stroke-linecap='round' stroke-miterlimit='10' stroke-width='.5' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z' stroke='rgba%280,0,0,1.0%29'/%3e%3c/svg%3e")
+}
+
+.dropdown-submenu.pull-left {
+    float: none
+}
+
+.dropdown-submenu.pull-left>.dropdown-menu {
+    left: -100%;
+    margin-left: 10px;
+    -webkit-border-radius: 6px 0 6px 6px;
+    -moz-border-radius: 6px 0 6px 6px;
+    border-radius: 6px 0 6px 6px
+}
+
+.nav-item.dropdown .dropdown-menu li,
+.nav-item.dropdown ul.dropdown-menu {
+    padding: 0;
+    border-radius: 11px
+}
+
+.dropdown-item {
+    padding: .4rem 1rem;
+    font-size: 15px;
+    color: #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: all .4s
+}
+
+a:hover.dropdown-toggle:not(.submenu)::after {
+    content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='57 35.171 26 16.043'%3e%3cpath fill='%23f2f5f7ed' d='M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z'/%3e%3c/svg%3e")
+}
+
+.dropdown-toggle::after {
+    display: inline-block;
+    vertical-align: middle;
+    content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='57 35.171 26 16.043'%3e%3cpath fill='%237d7979' d='M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z'/%3e%3c/svg%3e");
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 0;
+    padding-bottom: 0;
+    line-height: 0;
+    width: .6em;
+    margin-top: 0;
+    margin-bottom: 0;
+    justify-content: flex-end;
+    align-items: center
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+    color: #3eb49a;
+    background-color: #092327
+}
+
+.dropdown-menu {
+    padding: 5px 0 !important;
+    background-color: #000000E0 !important;
+    border-radius: 3px !important;
+    min-width: 240px
+}
+
+.header-bottom {
+    background-color: black;
+    // background: linear-gradient(130deg, #3eb49AF7 63%, #092327A8 100%), url(wp-content/uploads/2023/11/slide3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+.header-content {
+    position: relative;
+    z-index: 1
+}
+
+.header-bottom .container {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem
+}
+
+.header-bottom .container h1 {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.1em;
+    font-size: 60px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 10px
+}
+
+.header-bottom .container hr {
+    border-color: #00ffcb;
+    width: 35%;
+    opacity: 1
+}
+
+.header-breadcumbs {
+    display: flex;
+    justify-content: center
+}
+
+.header-breadcumbs li,
+.header-breadcumbs li a {
+    color: #fff;
+    transition: all .4s;
+    display: inline-flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 13px
+}
+
+.header-breadcumbs li a:hover {
+    opacity: .7
+}
+
+.header-breadcumbs li a i {
+    color: #fff;
+    margin-right: 10px
+}
+
+.header-breadcumbs li:last-child::before,
+.header-breadcumbs li:not(:first-child) a::before {
+    color: #fff;
+    margin: 0 7px;
+    transition: all .4s;
+    font-family: "Font Awesome 6 Free";
+    -webkit-font-smoothing: antialiased;
+    vertical-align: middle;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-rendering: auto;
+    content: "\f101";
+    font-weight: 700 !important;
+    font-size: 6px
+}
+
+.header-breadcumbs li a:hover::before,
+.header-breadcumbs li:last-child,
+.header-breadcumbs li:last-child::before {
+    color: #fff;
+    font-weight: 600
+}
+
+@media (min-width:992px) {
+    .navbar-main .nav-link {
+        color: #f2f5f7ed;
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+        transition: all .3s
+    }
+
+    .navbar-main .nav-link:hover {
+        color: #fff
+    }
+
+    .navbar-main .dropdown:hover .dropdown-menu:not(.submenu) {
+        display: block;
+        margin-top: 0
+    }
+
+    .navbar-main .dropdown-menu {
+        width: max-content
+    }
+}
+
+@media (max-width:991px) {
+    .navbar-main .nav-link {
+        color: #fff;
+        font-weight: 500;
+        font-size: 14px;
+        transition: all .5s;
+        line-height: 2;
+        padding: 10px 15px;
+        text-transform: uppercase;
+        letter-spacing: 1px
+    }
+
+    .navbar-main .nav-link:hover {
+        color: #3eb49a;
+        background-color: #0b5351
+    }
+
+    .dropdown-submenu>.dropdown-menu {
+        margin-top: .3rem;
+        margin-left: 0;
+        border-radius: 6px
+    }
+
+    .navbar-main .offcanvas {
+        background-color: #092327f5;
+        color: #fff
+    }
+
+    .navbar-main .offcanvas-body {
+        padding: 0
+    }
+
+    .navbar-main .btn-header {
+        margin-left: 15px
+    }
+
+    .nav-item.dropdown ul.dropdown-menu:not(.submenu) {
+        margin-left: 15px;
+        border-radius: 11px
+    }
+
+    .nav-item.dropdown ul.dropdown-menu.submenu {
+        margin: 0 10px
+    }
+
+    .dropdown-toggle::after {
+        position: relative;
+        float: right;
+        top: 10px;
+        width: 12px;
+        content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='57 35.171 26 16.043'%3e%3cpath fill='%23fff' d='M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z'/%3e%3c/svg%3e")
+    }
+
+    a:hover.dropdown-toggle:not(.submenu)::after {
+        content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='57 35.171 26 16.043'%3e%3cpath fill='%233eb49a' d='M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z'/%3e%3c/svg%3e")
+    }
+
+    .dropdown-submenu>a:after {
+        position: relative;
+        top: 2px
+    }
+
+    .nav-item.dropdown a.dropdown-item {
+        font-size: 14px
+    }
+
+    .header-bottom .container h1 {
+        font-size: 6vw
+    }
+}
+
+@media (max-width:768px) {
+    .header-breadcumbs ul {
+        flex-direction: column;
+        row-gap: 10px
+    }
 }
