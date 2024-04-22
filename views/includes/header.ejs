@@ -6,6 +6,40 @@
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/css/style.css' />
     <link rel='stylesheet' href='/stylesheets/css/fontawesome/css/all.min.css' />
+
+    <script type='importmap'>
+      {
+        "imports": {
+          "@fullcalendar/core": "https://cdn.skypack.dev/@fullcalendar/core@6.1.11",
+          "@fullcalendar/daygrid": "https://cdn.skypack.dev/@fullcalendar/daygrid@6.1.11"
+        }
+      }
+    </script>
+    <script type='module'>
+      import { Calendar } from '@fullcalendar/core'
+      import dayGridPlugin from '@fullcalendar/daygrid'
+
+      document.addEventListener('DOMContentLoaded', function() {
+        const calendarEl = document.getElementById('calendar')
+        const calendar = new Calendar(calendarEl, {
+          plugins: [dayGridPlugin],
+          themeSystem: 'bootstrap5',
+          // allDay: false,
+          editable: true,
+          selectable: true,
+          unselectAuto: false,
+          displayEventTime: false,
+          // events: myEvents,
+          headerToolbar: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+          }
+        })
+        calendar.render()
+      })
+    </script>
+
   </head>
   <body class="<%= bodyClass %>" >
 
@@ -29,9 +63,10 @@
               <div class="offcanvas-body">
                 <ul class="navbar-nav justify-content-lg-center align-items-lg-center flex-grow-1 pe-lg-3 gap-lg-2 w-100">
                   <li class="nav-item"><a class="tm-redirecionamento nav-link" href="">Home</a></li>
-                  <li class="nav-item"><a class="tm-redirecionamento nav-link" href="quem-somos">Quem Somos</a></li>
+                  <li class="nav-item"><a class="tm-redirecionamento nav-link" href="reservar">Nossos Espaços</a></li>
+                  <!-- <li class="nav-item"><a class="tm-redirecionamento nav-link" href="reservar">Nossos Espaços</a></li> -->
                   
-                  <li class="nav-item dropdown">
+                  <!-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="ambientes" role="button" data-bs-toggle="dropdown" aria-expanded="false">Ambientes</a>
                     <ul class="dropdown-menu">
                       <li><a class="dropdown-item" href="ambiente/banho/">Banho</a></li>
@@ -42,22 +77,22 @@
                       <li><a class="dropdown-item" href="ambiente/quartos/">Quartos</a></li>
                       <li><a class="dropdown-item" href="ambiente/outros/">Outros</a></li>
                     </ul>
-                  </li>
+                  </li> -->
     
-                  <li class="nav-item"><a class="tm-redirecionamento nav-link" href="contato">Contato</a></li>
+                  <!-- <li class="nav-item"><a class="tm-redirecionamento nav-link" href="contato">Contato</a></li> -->
     
-                  <li class="nav-item ms-lg-3 mt-lg-0 mt-4"><a class="btn-header btn-blue" href="orcamento">Solicitar Orçamento</a></li>
+                  <!-- <li class="nav-item ms-lg-3 mt-lg-0 mt-4"><a class="btn-header btn-blue" href="orcamento">Solicitar Orçamento</a></li> -->
                 </ul>
               </div>
             </div>
           </div>
     
           <div class="d-none d-lg-block col-lg-2">
-            <ul class="m-0 list-unstyled list-sociais-header">
+            <!-- <ul class="m-0 list-unstyled list-sociais-header">
               <li><a class="tm-facebook" href="<%= linkface %>" target="_blank" title="Facebook"><i class="fab fa-facebook-square"></i></a></li>
               <li><a class="tm-instagram" href="<%= Instagram %>" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
               <li><a class="tm-youtube" href="<%= youtube %>" target="_blank" title="Youtube"><i class="fab fa-youtube"></i></a></li>
-            </ul>
+            </ul> -->
           </div>
     
         </div>

@@ -56,7 +56,7 @@ img {
 
 .navbar-main {
     padding: 2rem 0;
-    background-color: #092327;
+    background-color: #151515;
 
     .logo-header {
         max-width: 180px;
@@ -371,7 +371,7 @@ a:hover.dropdown-toggle:not(.submenu)::after {
     }
 
     .navbar-main .offcanvas {
-        background-color: #092327f5;
+        background-color: #151515f5;
         color: #fff
     }
 
@@ -423,4 +423,30 @@ a:hover.dropdown-toggle:not(.submenu)::after {
         flex-direction: column;
         row-gap: 10px
     }
+}
+
+// Reservar
+.reservar-local {
+    background: #f1f1f1;
+    padding: 25px 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px -1px #00000090;
+}
+
+.reservar-local p.h1 {
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase; 
+    font-family: "Montserrat", sans-serif;
+}
+
+.reservar-local p {
+    font-size: 13px;
+    font-weight: 300
+}
+
+.lista-reservas {
+    max-height: 70vh;
+    overflow: auto;
+    /* padding: 10px; */
 }
